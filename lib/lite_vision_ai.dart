@@ -59,10 +59,18 @@ class LiteVisionAI {
     required String labels,
   }) async {
     final modelData = await rootBundle.load(model);
-    _interpreter = Interpreter.fromBuffer(modelData.buffer.asUint8List());
+    final buffer = modelData.buffer.asUint8List(
+      modelData.offsetInBytes,
+      modelData.lengthInBytes,
+    );
+    _interpreter = Interpreter.fromBuffer(buffer);
 
     final labelData = await rootBundle.loadString(labels);
-    _labels = labelData.split('\n').where((e) => e.isNotEmpty).toList();
+    _labels = labelData
+        .split('\n')
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
 
     _ready = true;
   }
@@ -92,7 +100,8 @@ class LiteVisionAI {
 
     // Resize to 224x224 (standard for most TFLite models)
     const inputSize = 224;
-    final resized = img.copyResize(original, width: inputSize, height: inputSize);
+    final resized =
+        img.copyResize(original, width: inputSize, height: inputSize);
 
     // Normalize pixel values to [-1, 1]
     final input = List.generate(1, (_) {
@@ -109,9 +118,10 @@ class LiteVisionAI {
     });
 
     // Run model inference
-    final output = List.filled(_labels.length, 0.0).reshape([1, _labels.length]);
+    final output =
+        List.filled(_labels.length, 0.0).reshape([1, _labels.length]);
     _interpreter.run(input, output);
-    final scores = output[0];
+    final List<double> scores = List<double>.from(output[0]);
 
     // Sort predictions (highest confidence first)
     final ranked = List.generate(scores.length, (i) => MapEntry(i, scores[i]))

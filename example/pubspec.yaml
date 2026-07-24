@@ -1,16 +1,16 @@
 name: lite_vision_ai_example
 description: Example app for the lite_vision_ai package.
-publish_to: 'none' 
+publish_to: "none"
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
   lite_vision_ai:
-    path: ../lite_vision_ai        
-  image_picker: ^1.1.2  
+    path: ../
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
