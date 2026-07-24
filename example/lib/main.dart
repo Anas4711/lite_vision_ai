@@ -35,7 +35,7 @@ class _LiteVisionDemoState extends State<LiteVisionDemo> {
     _initVision();
   }
 
-  /// Load model and labels at startup
+  /// Load model and labels at startup which are you should have placed in the assets folder and declared in pubspec.yaml
   Future<void> _initVision() async {
     await vision.load(
       model: 'assets/models/model.tflite',

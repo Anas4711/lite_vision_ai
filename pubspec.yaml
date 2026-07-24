@@ -1,7 +1,8 @@
 name: lite_vision_ai
 description: "A lightweight and elegant Flutter library for TensorFlow Lite image classification."
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/Anas4711/lite_vision_ai
+repository: https://github.com/Anas4711/lite_vision_ai
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

@@ -1,3 +1,9 @@
+## 1.0.3
+
+- 📦 Added default sample TFLite model and labels to the example project.
+- 📝 Improved example code and doc comments for seamless asset configuration.
+- 🎨 Refined README instructions for quick initialization.
+
 ## 1.0.2
 
 * Fixed pixel normalization and image processing for `image` v4+ compatibility.

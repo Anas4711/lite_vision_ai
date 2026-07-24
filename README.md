@@ -30,7 +30,7 @@ Add `lite_vision_ai` to your `pubspec.yaml`:
 dependencies:
   flutter:
     sdk: flutter
-  lite_vision_ai: ^1.0.2
+  lite_vision_ai: ^1.0.3
 ```
 Then run:
 
