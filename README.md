@@ -3,7 +3,7 @@
 [![Pub Version](https://img.shields.io/pub/v/lite_vision_ai.svg)](https://pub.dev/packages/lite_vision_ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Anas4711/lite_vision_ai.svg)](https://github.com/Anas4711/lite_vision_ai/stargazers)
 [![License](https://img.shields.io/github/license/Anas4711/lite_vision_ai.svg)](https://opensource.org/licenses/MIT)
-![Platform Support](https://img.shields.io/badge/platform-android%20|%20ios%20|%20windows%20|%20macos%20|%20linux-blue)
+![Platform Support](https://img.shields.io/badge/platform-android%20|%20ios-blue)
 ![Null Safety](https://img.shields.io/badge/null%20safety-supported-success)
 
 A lightweight, fast, and elegant Flutter library for on-device **image classification** using **TensorFlow Lite**.  
@@ -17,7 +17,7 @@ Designed to be **simple**, **offline-first**, and **easy to integrate** into pro
 - 🚀 **High Performance:** Fast image inference powered by `tflite_flutter`.
 - 🎯 **Custom Models:** Easily load your own `.tflite` models and `.txt` labels.
 - 📊 **Top-N Predictions:** Configurable top prediction confidence percentages.
-- 🌐 **Cross-Platform:** Supports Android, iOS, Windows, macOS, and Linux.
+- 🌐 **Cross-Platform:** Supports Android and iOS.
 - 🛠️ **Flutter 3 & Image v4+ Compatible:** Built-in modern pixel normalization and safe byte buffers.
 
 ---
